@@ -166,6 +166,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://polarischiba.github.io/myblog/2020/10/14/Kattis-shortestpath3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/myblog/uploads/avatar.jpg">
+      <meta itemprop="name" content="PolarisChiba">
+      <meta itemprop="description" content="PolarisChiba's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PolarisChiba's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/myblog/2020/10/14/Kattis-shortestpath3/" class="post-title-link" itemprop="url">Kattis：shortestpath3題解、心得</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-10-14 00:06:22 / 修改時間：00:26:27" itemprop="dateCreated datePublished" datetime="2020-10-14T00:06:22+08:00">2020-10-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>「這題絕對值得大書特書」看到結果是綠色的那一瞬間，我這麼想著。</p>
+</blockquote>
+<h1 id="題目-Single-source-shortest-path-negative-weights"><a href="#題目-Single-source-shortest-path-negative-weights" class="headerlink" title="題目: Single source shortest path, negative weights"></a>題目: Single source shortest path, negative weights</h1><p>給一張帶權圖，請求出起點到所有點的最短距離。若是能夠到無限小請輸出”-Infinity”、若是到達不了請輸出”Impossible”。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>非常經典簡單的一道題，Bellman-Ford就可以輾過去了，我一開始也是這樣想的。</p>
+<h1 id="解題經過"><a href="#解題經過" class="headerlink" title="解題經過"></a>解題經過</h1><p>一開始我想說用SPFA，因為陳重諺昨天和我說SPFA幾乎和Dijkstra一樣。<br>範測也過了，緊接著就WA了。<br>？？？</p>
+<blockquote>
+<p>「問題大概出在判斷哪些點經過負環吧」當時的我很精確地看出問題點。</p>
+</blockquote>
+<p>但問題是，接下來我所實施的方法沒有一個奏效的。<br>我亂改了UPD的寫法、break的判斷……等等，有的沒的，但通通失敗收場。</p>
+<h1 id="找詳解"><a href="#找詳解" class="headerlink" title="找詳解"></a>找詳解</h1><p>雖然想說不要看解比較好，但因為這題明顯應該是水題，所以我還是去戳解了。<br>但看著別人的code，左思右想，看起來和我的只有寫法上的差異啊(？<br>但根據以往的經驗，寫法上的差異，往往就是BUG的問題點所在(廢話)。</p>
+<h1 id="問題點"><a href="#問題點" class="headerlink" title="問題點"></a>問題點</h1><pre><code>d[i.first.second] &gt; d[i.first.first] + i.second</code></pre>
+<p>我是使用這一行來判斷<code>i.first.second</code>是否在負環上的，如果還能被更新，那就是了。<br>每個<code>d</code>一開始都被初始化為<code>INF</code>了，<code>INF</code>是一個很大的常數。<br>另外，我也是使用這一行來判斷是否更新的。<br>但這就是問題所在了：<br><strong>如果在到達不了的地方形成環的話，就會被歸類在負環裡</strong><br>也因此，要寫成這樣才行：</p>
+<pre><code>d[i.first.first] != INF &amp;&amp; d[i.first.second] &gt; d[i.first.first] + i.second</code></pre>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>沒想到，在dijkstra的時候不需要考慮的INF問題，卻讓我在這裡吃了大虧。<br>看來就算是簡單模板題最好也是寫一下，以免未來出現甚麼奇怪的BUG。<br>另外，這件事情也告訴我，一個程式最好寫的嚴謹一點比較好。<br>畢竟INF的點原本就不能拿去更新其他點啊！</p>
+<p>總之，這題最後還是AC了(耶~~)。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="http://polarischiba.github.io/myblog/2020/10/11/NCPC2020/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -381,14 +455,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/myblog/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/myblog/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
