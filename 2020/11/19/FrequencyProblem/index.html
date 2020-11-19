@@ -21,20 +21,20 @@
     var CONFIG = {"hostname":"polarischiba.github.io","root":"/myblog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="思考過後依舊不懂蒼穹之下，獨自一人風吹過的正午，思慮逐漸飄離誒，今後該何去何從呢？根本沒學會該如何才能向前邁進左顧右盼，我一語不發繼續前行">
+  <meta name="description" content="這題卡了很久，超級久，所以還是寫出來一下吧。  題目一個長度為 N 的數列($N \leq 200000$)，求出一個最長的區間使的其相異的眾數數量至少為二。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="所以我放棄了資訊(演算法競賽)">
-<meta property="og:url" content="http://polarischiba.github.io/myblog/2020/10/30/GiveUp/index.html">
+<meta property="og:title" content="Frequency Problem (Hard Version)">
+<meta property="og:url" content="http://polarischiba.github.io/myblog/2020/11/19/FrequencyProblem/index.html">
 <meta property="og:site_name" content="PolarisChiba&#39;s Blog">
-<meta property="og:description" content="思考過後依舊不懂蒼穹之下，獨自一人風吹過的正午，思慮逐漸飄離誒，今後該何去何從呢？根本沒學會該如何才能向前邁進左顧右盼，我一語不發繼續前行">
+<meta property="og:description" content="這題卡了很久，超級久，所以還是寫出來一下吧。  題目一個長度為 N 的數列($N \leq 200000$)，求出一個最長的區間使的其相異的眾數數量至少為二。">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-10-30T02:07:24.000Z">
-<meta property="article:modified_time" content="2020-10-30T02:53:47.626Z">
+<meta property="article:published_time" content="2020-11-19T04:36:21.000Z">
+<meta property="article:modified_time" content="2020-11-19T04:54:51.186Z">
 <meta property="article:author" content="PolarisChiba">
 <meta property="article:tag" content="PolarisChiba, Blog">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://polarischiba.github.io/myblog/2020/10/30/GiveUp/">
+<link rel="canonical" href="http://polarischiba.github.io/myblog/2020/11/19/FrequencyProblem/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>所以我放棄了資訊(演算法競賽) | PolarisChiba's Blog</title>
+  <title>Frequency Problem (Hard Version) | PolarisChiba's Blog</title>
   
 
 
@@ -173,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://polarischiba.github.io/myblog/2020/10/30/GiveUp/">
+    <link itemprop="mainEntityOfPage" href="http://polarischiba.github.io/myblog/2020/11/19/FrequencyProblem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/myblog/uploads/avatar.jpg">
@@ -186,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          所以我放棄了資訊(演算法競賽)
+          Frequency Problem (Hard Version)
         </h1>
 
         <div class="post-meta">
@@ -197,7 +197,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2020-10-30 10:07:24 / 修改時間：10:53:47" itemprop="dateCreated datePublished" datetime="2020-10-30T10:07:24+08:00">2020-10-30</time>
+              <time title="創建時間：2020-11-19 12:36:21 / 修改時間：12:54:51" itemprop="dateCreated datePublished" datetime="2020-11-19T12:36:21+08:00">2020-11-19</time>
             </span>
 
           
@@ -211,17 +211,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>思考過後依舊不懂<br>蒼穹之下，獨自一人<br>風吹過的正午，思慮逐漸飄離<br>誒，今後該何去何從呢？<br>根本沒學會該如何才能向前邁進<br>左顧右盼，我一語不發繼續前行</p>
+        <blockquote>
+<p>這題卡了很久，超級久，所以還是寫出來一下吧。</p>
+</blockquote>
+<h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p>一個長度為 <script type="math/tex">N</script> 的數列($N \leq 200000$)，求出一個最長的區間使的其相異的眾數數量至少為二。</p>
 <a id="more"></a>
-
-<p>思考過後依舊不懂<br>青春完全無聊至極<br>本該放棄了資訊，卻改不了打開電腦的習慣<br>誒，未來時我在做些甚麼呢？<br>如果和資訊無關的話就太好了<br>願無遺憾遺留</p>
-<p>就算心中仍殘留一絲一縷<br>依舊是消失無蹤了，畢竟早就為時已晚<br>喂，別再想起了啊<br>根本就完全是錯誤的<br>根本甚麼都沒搞懂啊，不管是你們這群人<br>還是真實、錢、世界、痛苦、又或是人生，全都不重要了<br>只能以本能判斷正確與否<br>仔細想想，這些是我的錯嗎？</p>
-<p>思考過後依舊不懂，其實我根本不想變老<br>就算知道總有一天會死，依舊感到無比空虛<br>未來時我在做些甚麼呢？<br>這只有未來時才會知道<br>根本甚麼都沒有做成啊</p>
-<p>要怎樣才能乾脆的去憎恨那些正確過著人生的人呢？<br>滿腦子的自卑感一點都無法消除<br>我根本就沒有錯啊<br>喂，做著些甚麼的你們這些人啊<br>討論也好玩笑也好還是不管甚麼言詞的，沒由來的通通都令人反感啊<br>特定的梗會讓人發笑也只不過是因為氣氛使然<br>已經，甚麼都無所謂了啊</p>
-<p>思考過後依舊不懂<br>光是繼續活著就是痛苦的了<br>資訊一點好處都沒有<br>程式甚麼的也隨便打一打就好了<br>都無所謂了啦</p>
-<p>沒錯吧？<br>我沒做錯吧？<br>其實是大錯特錯，其實我早就知道的<br>不管是你們這群人<br>還是真實、錢、救贖、溫柔、又或是人生甚麼的，都不重要了<br>不去明白正確為何究竟是出自自我防衛<br>無所謂了，反正已經如此</p>
-<p>我曾經也是有著夢想<br>但那已經不值一提了<br>無數次譜繪著藍圖<br>即使明白不一定有著回報<br>這是真的，就算通通都是謊言也唯有這是真的，從一開始就是如此了</p>
-<p>所以我才放棄了資訊(演算法競賽)</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>找出來的序列肯定包含著整個數列的眾數。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><p>若一個數字出現的次數多於$\sqrt(N)$的話，就直接暴力掃。<br>用1、0、-1的序列去掃，可以$O(N)$算出每個的答案，因此這裡的複雜度總共是$O(N^\frac{3}{2})$。</p>
+<hr>
+<p>接下來考慮出現次數少於$\sqrt(N)$的那些數字。<br>換言之，就是要去看眾數數量少於$\sqrt(N)$的那些區間。<br>對於一個長度$len$，固定右界，維護左界使的整個區間的眾數數量少於$len$，因為左界有單調性，因此可以two pointer。</p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>在第一種case中，每次要將紀錄已經出現過的東西的陣列清為-1，並且<strong>將初始的數量清為0</strong>，因為這點我卡了幾個小時吧QQQ。<br>在第二種case中，其實換置了一些概念，總之希望腦袋能清楚一點＞＜。</p>
 
     </div>
 
@@ -237,7 +236,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
-    <a href="http://polarischiba.github.io/myblog/2020/10/30/GiveUp/" title="所以我放棄了資訊(演算法競賽)">http://polarischiba.github.io/myblog/2020/10/30/GiveUp/</a>
+    <a href="http://polarischiba.github.io/myblog/2020/11/19/FrequencyProblem/" title="Frequency Problem (Hard Version)">http://polarischiba.github.io/myblog/2020/11/19/FrequencyProblem/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
@@ -254,13 +253,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/myblog/2020/10/17/ISSC2020/" rel="prev" title="2020ISSC心得">
-      <i class="fa fa-chevron-left"></i> 2020ISSC心得
+    <a href="/myblog/2020/11/12/ICPCTaipei2020/" rel="prev" title="2020 ICPC台北站心得">
+      <i class="fa fa-chevron-left"></i> 2020 ICPC台北站心得
     </a></div>
-      <div class="post-nav-item">
-    <a href="/myblog/2020/11/12/ICPCTaipei2020/" rel="next" title="2020 ICPC台北站心得">
-      2020 ICPC台北站心得 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -319,6 +315,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%8C%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">4.</span> <span class="nav-text">注意</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -512,6 +509,59 @@ window.addEventListener('pjax:success', () => {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
